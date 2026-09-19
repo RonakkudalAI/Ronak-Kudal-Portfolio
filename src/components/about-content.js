@@ -1,0 +1,102 @@
+'use client';
+
+import { FaLinkedin, FaGithub, FaKaggle } from 'react-icons/fa';
+import { PiCheck } from 'react-icons/pi';
+import SectionHeading from './ui/section-heading';
+import Reveal from './ui/reveal';
+import ClipCard from './ui/clip-card';
+import { ClipOutlineButton } from './ui/buttons';
+import { profile, socials as socialsData } from '../data/personalInfo';
+
+const stats = profile.stats;
+const highlights = profile.highlights;
+
+const iconMap = {
+    LinkedIn: <FaLinkedin />,
+    GitHub: <FaGithub />,
+    Kaggle: <FaKaggle />,
+};
+
+const socials = socialsData.map((s) => ({
+    ...s,
+    icon: iconMap[s.name] || null,
+}));
+
+const toneMap = {
+    maroon: 'bg-metric-1-bg text-metric-1-fg',
+    blue: 'bg-metric-2-bg text-metric-2-fg',
+    coffee: 'bg-metric-3-bg text-metric-3-fg',
+    plum: 'bg-metric-4-bg text-metric-4-fg',
+};
+
+const AboutContent = () => {
+    return (
+        <section id="about" className="sec sec-2 px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
+            <div className="mx-auto max-w-6xl">
+                <SectionHeading
+                    eyebrow="About"
+                    title="Turning ideas into intelligent, shipped software"
+                    subtitle="Get to know me a little better."
+                />
+
+                <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+                    {/* Left — text */}
+                    <Reveal>
+                        {profile.bioParagraphs.map((para, i) => (
+                            <p key={i} className="text-lg leading-relaxed text-pretty text-muted-foreground mb-4">
+                                {para}
+                            </p>
+                        ))}
+
+                        <ul className="mt-7 grid gap-2.5 sm:grid-cols-2">
+                            {highlights.map((h) => (
+                                <li
+                                    key={h}
+                                    className="flex items-center gap-2.5 text-sm text-foreground/90"
+                                >
+                                    <span className="flex size-5 flex-shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary ring-1 ring-primary/30">
+                                        <PiCheck className="size-3" />
+                                    </span>
+                                    {h}
+                                </li>
+                            ))}
+                        </ul>
+
+                        <div className="mt-8 flex flex-wrap gap-3">
+                            {socials.map((s) => (
+                                <ClipOutlineButton
+                                    key={s.name}
+                                    href={s.url}
+                                    target="_blank"
+                                    innerClassName="px-4 py-2"
+                                >  
+                                    <span className="text-base text-muted-foreground">{s.icon}</span>
+                                    <span className='font-geom'>{s.name}</span>
+                                </ClipOutlineButton>
+                            ))}
+                        </div>
+                    </Reveal>
+
+                    {/* Right — stat tiles */}
+                    <Reveal delay={0.1} className="grid grid-cols-2 gap-4">
+                        {stats.map((s, i) => (
+                            <ClipCard
+                                key={s.label}
+                                border={i === 0 ? 'border-accent-clip' : 'bg-border'}
+                                outerClassName="[--notch:18px] transition-transform duration-300 hover:-translate-y-1"
+                                className={`${toneMap[s.tone]} flex flex-col justify-center p-6 [--notch:18px]`}
+                            >
+                                <div className="font-merriweather text-4xl font-bold leading-none">
+                                    {s.value}
+                                </div>
+                                <div className="mt-2 text-sm font-medium font-geom opacity-80">{s.label}</div>
+                            </ClipCard>
+                        ))}
+                    </Reveal>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default AboutContent;

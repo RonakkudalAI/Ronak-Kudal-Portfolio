@@ -1,7 +1,7 @@
 'use client';
 
 import { toast } from 'sonner';
-import { FaLinkedin, FaGithub, FaKaggle, FaYoutube, FaPhoneAlt } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaKaggle, FaYoutube, FaPhoneAlt, FaEnvelope, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { SiLeetcode } from 'react-icons/si';
 import { PiPaperPlaneTilt } from 'react-icons/pi';
@@ -17,8 +17,10 @@ const iconMap = {
     Kaggle: <FaKaggle />,
     Twitter: <FaXTwitter />,
     LeetCode: <SiLeetcode />,
+    Instagram: <FaInstagram />,
     YouTube: <FaYoutube />,
     Phone: <FaPhoneAlt />,
+    Email: <FaEnvelope />,
 };
 
 const socials = socialsData.map((s) => ({

@@ -2,6 +2,7 @@
 
 import { Fragment } from 'react';
 import { PiBriefcase, PiSparkle, PiPaperPlaneTilt, PiRocketLaunch, PiGlobeHemisphereWest } from 'react-icons/pi';
+import { profile } from '../data/personalInfo';
 
 /**
  * TickerBar — the slim availability marquee that sits above the navbar.
@@ -25,18 +26,18 @@ const messages = [
         icon: <PiRocketLaunch />,
         text: 'I build',
         accent: 'AI MVPs & prototypes',
-        tail: 'for startups — from idea to shipped in weeks',
+        tail: 'from idea to shipped in weeks',
     },
     {
         icon: <PiGlobeHemisphereWest />,
-        text: 'Want to work remotely with',
-        accent: 'US & European',
+        text: 'Open for remote opportunities —',
+        accent: 'Global & Remote',
         tail: 'clients',
     },
     {
         icon: <PiPaperPlaneTilt />,
         text: "Let's build something —",
-        accent: 'princekhunt04@gmail.com',
+        accent: profile.email,
         tail: '',
     },
 ];

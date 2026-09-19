@@ -1,4 +1,6 @@
-const SITE_URL = 'https://princekhunt16.github.io/PortfolioWebsite/';
+import { profile } from '../data/personalInfo';
+
+const SITE_URL = profile.siteUrl.endsWith('/') ? profile.siteUrl : `${profile.siteUrl}/`;
 
 export const dynamic = 'force-static';
 

@@ -34,7 +34,7 @@ const CertificationsContent = () => {
                                 className="group flex h-full flex-col bg-card [--notch:18px]"
                             >
                                 <div
-                                    className="relative overflow-hidden bg-muted"
+                                    className="relative overflow-hidden bg-slate-950 flex items-center justify-center"
                                     style={{ paddingBottom: '70%' }}
                                 >
                                     <Image
@@ -42,7 +42,7 @@ const CertificationsContent = () => {
                                         height={375}
                                         src={cert.certificateImage}
                                         alt={cert.title}
-                                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        className="absolute inset-0 h-full w-full object-contain p-2 transition-transform duration-500 group-hover:scale-105"
                                     />
                                 </div>
                                 <div className="flex flex-1 flex-col p-4">

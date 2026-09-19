@@ -147,15 +147,6 @@ const Sidebar = ({ ml, setMl }) => {
                     </a>
                 </li>
 
-                <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/experience')}`}>
-                    <a href="#experience" onClick={(e) => goToSection(e, '#experience')} className="flex items-center gap-3 w-full text-xl py-3 relative">
-                        <RiStairsFill size={22} />
-                        <span className={`absolute left-[35px] ${!isText ? 'opacity-100' : 'opacity-0'}`}>
-                            Experience
-                        </span>
-                    </a>
-                </li>
-
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/resume')}`}>
                     <a href="/resume.pdf" onClick={closeSidebarOnMobile} className="flex items-center gap-3 w-full text-xl py-3 relative">
                         <LiaFilePdf size={22} />
@@ -197,15 +188,6 @@ const Sidebar = ({ ml, setMl }) => {
                         <LiaCertificateSolid size={22} />
                         <span className={`absolute left-[35px] ${!isText ? 'opacity-100' : 'opacity-0'}`}>
                             Achievements
-                        </span>
-                    </a>
-                </li>
-
-                <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/youtubegallery')}`}>
-                    <a href="#youtube" onClick={(e) => goToSection(e, '#youtube')} className="flex items-center gap-3 w-full text-xl py-3 relative">
-                        <FaYoutube size={22} />
-                        <span className={`absolute left-[35px] ${!isText ? 'opacity-100' : 'opacity-0'}`}>
-                            YouTube Gallery
                         </span>
                     </a>
                 </li>

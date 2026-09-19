@@ -1,26 +1,13 @@
 'use client';
 
-import { FaLinkedin, FaGithub, FaKaggle } from 'react-icons/fa';
 import { PiCheck } from 'react-icons/pi';
 import SectionHeading from './ui/section-heading';
 import Reveal from './ui/reveal';
 import ClipCard from './ui/clip-card';
-import { ClipOutlineButton } from './ui/buttons';
-import { profile, socials as socialsData } from '../data/personalInfo';
+import { profile } from '../data/personalInfo';
 
 const stats = profile.stats;
 const highlights = profile.highlights;
-
-const iconMap = {
-    LinkedIn: <FaLinkedin />,
-    GitHub: <FaGithub />,
-    Kaggle: <FaKaggle />,
-};
-
-const socials = socialsData.map((s) => ({
-    ...s,
-    icon: iconMap[s.name] || null,
-}));
 
 const toneMap = {
     maroon: 'bg-metric-1-bg text-metric-1-fg',
@@ -61,20 +48,6 @@ const AboutContent = () => {
                                 </li>
                             ))}
                         </ul>
-
-                        <div className="mt-8 flex flex-wrap gap-3">
-                            {socials.map((s) => (
-                                <ClipOutlineButton
-                                    key={s.name}
-                                    href={s.url}
-                                    target="_blank"
-                                    innerClassName="px-4 py-2"
-                                >  
-                                    <span className="text-base text-muted-foreground">{s.icon}</span>
-                                    <span className='font-geom'>{s.name}</span>
-                                </ClipOutlineButton>
-                            ))}
-                        </div>
                     </Reveal>
 
                     {/* Right — stat tiles */}

@@ -1,13 +1,19 @@
 'use client';
 
-import { PiBrain, PiStack, PiCode, PiWrench } from 'react-icons/pi';
+import { PiBrain, PiStack, PiCode, PiWrench, PiCalculator } from 'react-icons/pi';
 import { MdOutlineScience } from 'react-icons/md';
 import SectionHeading from './ui/section-heading';
 import Reveal from './ui/reveal';
 import FeatureCard from './ui/feature-card';
 import { skillCategories as rawSkillCategories } from '../data/personalInfo';
 
-const categoryIcons = [<PiBrain key="1" />, <PiStack key="2" />, <PiCode key="3" />, <PiWrench key="4" />];
+const categoryIcons = [
+    <PiBrain key="1" />,
+    <PiStack key="2" />,
+    <PiCalculator key="3" />,
+    <PiCode key="4" />,
+    <PiWrench key="5" />,
+];
 
 const SkillsContent = () => {
     return (

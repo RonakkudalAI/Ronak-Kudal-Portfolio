@@ -18,14 +18,14 @@ const ProjectCard = ({ project, featured }) => {
             className="group flex h-full flex-col bg-card [--notch:22px]"
         >
             {/* media */}
-            <div className="relative overflow-hidden bg-muted">
-                <div className="relative w-full" style={{ aspectRatio: '16 / 10' }}>
+            <div className="relative overflow-hidden bg-slate-950">
+                <div className="relative w-full flex items-center justify-center" style={{ aspectRatio: '16 / 10' }}>
                     <Image
-                        width={640}
-                        height={400}
+                        width={800}
+                        height={500}
                         src={mainImage}
                         alt={project.title}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                 </div>
                 {project.projectImages.length > 1 && (

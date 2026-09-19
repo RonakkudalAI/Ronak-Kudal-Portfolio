@@ -26,15 +26,15 @@ const HeroContent = () => {
                 {/* avatar in a cut-corner frame */}
                 <ClipCard
                     border="border-accent-clip"
-                    outerClassName="ld-float mt-8 [--notch:16px] shadow-[0_30px_80px_-40px_var(--shadow-tint)]"
-                    className="bg-card [--notch:16px]"
+                    outerClassName="ld-float mt-8 [--notch:26px] shadow-[0_30px_80px_-40px_var(--shadow-tint)]"
+                    className="bg-card [--notch:26px]"
                 >
                     <Image
-                        width={150}
-                        height={150}
+                        width={400}
+                        height={400}
                         src={profile.avatarUrl}
                         alt={profile.name}
-                        className="font-caprasimo size-[120px] object-cover sm:size-[140px]"
+                        className="size-[250px] sm:size-[320px] md:size-[360px] object-cover object-top"
                         priority
                     />
                 </ClipCard>
@@ -47,14 +47,16 @@ const HeroContent = () => {
                 </div>
 
                 {/* tagline */}
-                <p className="font-geom mt-5 max-w-2xl text-lg font-medium text-balance text-foreground/80 sm:text-xl">
-                    {profile.tagline}
-                </p>
+                <p
+                    className="font-geom mt-5 max-w-2xl text-lg font-medium text-balance text-foreground/80 sm:text-xl"
+                    dangerouslySetInnerHTML={{ __html: profile.tagline }}
+                />
 
                 {/* sub-tagline */}
-                <p className="font-geom mt-4 max-w-xl text-pretty leading-relaxed text-muted-foreground">
-                    {profile.subtagline}
-                </p>
+                <p
+                    className="font-geom mt-4 max-w-xl text-pretty leading-relaxed text-muted-foreground"
+                    dangerouslySetInnerHTML={{ __html: profile.subtagline }}
+                />
 
                 {/* CTAs */}
                 <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row">

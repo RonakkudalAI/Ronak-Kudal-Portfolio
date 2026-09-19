@@ -18,33 +18,37 @@ const AchievementsContent = () => {
                     subtitle="A few moments I'm proud of."
                 />
 
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {achievements.map((achievement, index) => (
-                        <Reveal key={index}>
+                        <Reveal key={index} delay={(index % 3) * 0.07}>
                             <ClipCard
                                 border="border-accent-clip"
                                 outerClassName="[--notch:22px] h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_var(--shadow-tint)]"
                                 className="group flex h-full flex-col bg-card [--notch:22px]"
                             >
                                 <div
-                                    className="relative overflow-hidden bg-muted"
+                                    className="relative overflow-hidden bg-slate-950 flex items-center justify-center"
                                     style={{ paddingBottom: '66%' }}
                                 >
                                     <Image
-                                        width={500}
-                                        height={375}
-                                        src={achievement.image || './achivements/achivement-1.jpeg'}
+                                        width={600}
+                                        height={400}
+                                        src={achievement.image || './achievements/udyam_showcase.jpg'}
                                         alt={achievement.title}
-                                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        className="absolute inset-0 h-full w-full object-contain p-1 transition-transform duration-500 group-hover:scale-105"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.12_0.03_15_/_0.7)] to-transparent" />
                                 </div>
                                 <div className="flex flex-1 flex-col p-6">
                                     <h3 className="font-geom text-base font-semibold leading-relaxed text-foreground">
                                         {achievement.title}
                                     </h3>
+                                    {achievement.description && (
+                                        <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                                            {achievement.description}
+                                        </p>
+                                    )}
                                     <div className="mt-4 flex flex-wrap gap-2">
-                                        {(achievement.highlights || [achievement.badge || 'Achievement']).map((h, i) => (
+                                        {(achievement.highlights || [achievement.badge || 'Milestone']).map((h, i) => (
                                             <span
                                                 key={i}
                                                 className="font-geom bg-accent/70 px-3 py-1 text-xs font-medium text-accent-foreground ring-1 ring-primary/20"
@@ -57,33 +61,6 @@ const AchievementsContent = () => {
                             </ClipCard>
                         </Reveal>
                     ))}
-
-                    {/* Kaggle Expert highlight */}
-                    <Reveal delay={0.1}>
-                        <ClipCard
-                            outerClassName="[--notch:22px] h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_var(--shadow-tint)]"
-                            className="flex h-full flex-col items-center justify-center bg-card p-10 text-center [--notch:22px]"
-                        >
-                            <div className="flex size-16 items-center justify-center rounded-full bg-primary/15 text-3xl text-primary ring-1 ring-primary/30">
-                                <PiTrophy />
-                            </div>
-                            <h3 className="font-caprasimo mt-5 text-3xl text-foreground">
-                                Kaggle 2x Expert
-                            </h3>
-                            <p className="mt-3 max-w-xs text-muted-foreground">
-                                Recognized as a Kaggle Expert in Notebooks and Datasets.
-                            </p>
-                            <ClipOutlineButton
-                                href="https://www.kaggle.com/princekhunt19"
-                                target="_blank"
-                                className="mt-6"
-                                innerClassName="px-5 py-2.5"
-                            >
-                                <span className="font-geom font-semibold">View Kaggle Profile</span>
-                                <PiArrowUpRight className="size-4 text-primary" />
-                            </ClipOutlineButton>
-                        </ClipCard>
-                    </Reveal>
                 </div>
             </div>
         </section>

@@ -47,10 +47,21 @@ export const experiences = [
         company: 'SnapClass AI Project',
         companyUrl: '#',
         location: 'Udaipur, Rajasthan',
-        duration: '2024 – Present',
+        duration: '2026',
         points: [
             'Led the development of SnapClass, a Smart AI Attendance System with multimodal identity verification using face and voice recognition.',
             'Architected analytics dashboards, role-based authentication, and automated session tracking.',
+        ],
+    },
+    {
+        role: 'WordPress Developer & Content Writer',
+        company: 'Freelance & US Client Projects',
+        companyUrl: '#',
+        location: 'Remote',
+        duration: '2023',
+        points: [
+            'Developed and customized WordPress websites, optimizing UI/UX layouts, page speed, and SEO performance.',
+            'Authored educational and financial content tailored for US-based clients and audiences.',
         ],
     },
     {
@@ -58,7 +69,7 @@ export const experiences = [
         company: 'Independent Online Business',
         companyUrl: '#',
         location: 'Udaipur, Rajasthan',
-        duration: '2021 – 2024',
+        duration: '2021 – Present',
         points: [
             'Founded and managed an online business serving 500+ customers, developing customer communication, sales, and business management skills.',
             'Managed customer relations, digital marketing, product delivery, and business operations alongside technical studies.',

@@ -328,6 +328,22 @@ export const projects = [
         ],
     },
     {
+        title: 'Ola Ride Data Analytics Dashboard',
+        projectImages: ['./projects/ola_analytics.png'],
+        descriptionPoints: [
+            'Analyzed Ola ride-booking dataset (1.03L+ bookings, ₹4.2 Cr revenue) to generate key business insights across revenue, cancellations, driver ratings, and customer behavior.',
+            'Built interactive Power BI dashboards utilizing DAX metrics for booking success rates (61.9%), cancellation patterns, vehicle type performance, and peak demand trends.',
+            'Evaluated operational efficiency and driver rating distributions to identify service bottlenecks and optimize ride completion rates.',
+        ],
+        techstack: ['Power BI', 'DAX', 'Data Analysis', 'Data Cleaning', 'Data Visualization'],
+        links: [
+            {
+                title: 'GitHub',
+                url: 'https://github.com/RonakkudalAI/Ola-Analytics-Project',
+            },
+        ],
+    },
+    {
         title: 'BTech With TRRK — Tech Blog & Web Development Project',
         projectImages: ['./projects/btech_trrk.png'],
         descriptionPoints: [

@@ -14,9 +14,9 @@ export const profile = {
     resumeUrl: './resume.pdf', // Replace with your resume PDF in public/
     siteUrl: 'https://RonakkudalAI.github.io/portfolio',
     bioParagraphs: [
-        `Hello! I'm Ronak Kudal, an AI/ML Engineer with hands-on experience building end-to-end Machine Learning and Generative AI applications using Python, LLMs, RAG, LangChain, LangGraph, and FastAPI.`,
-        `I have extensive experience developing intelligent systems for resume analysis, interview preparation, skill-gap analysis, semantic retrieval, AI agents, and multimodal identity verification.`,
-        `With a strong foundation in Machine Learning, Deep Learning, NLP, Computer Vision, SQL, and Data Structures, I specialize in bringing full-stack AI products from concept to production.`,
+        `Hello! I'm Ronak Kudal, an AI/ML Engineer passionate about building intelligent solutions.`,
+        `Skilled in ML, DL, GenAI, LLMs, RAG, LangChain, and LangGraph. I enjoy solving real-world problems with data-driven insights and shipping full-stack applications.`,
+        `Currently seeking an AI / ML Engineer role to gain industry experience and contribute to impactful work.`,
     ],
     stats: [
         { value: '150+', label: 'LeetCode Problems', tone: 'maroon' },
